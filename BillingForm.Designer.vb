@@ -17,178 +17,214 @@ Partial Class BillingForm
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.lblTitle = New System.Windows.Forms.Label()
-        Me.lblID = New System.Windows.Forms.Label()
-        Me.lblPatient = New System.Windows.Forms.Label()
-        Me.lblAmount = New System.Windows.Forms.Label()
-        Me.lblPaymentStatus = New System.Windows.Forms.Label()
-        Me.lblDate = New System.Windows.Forms.Label()
-        Me.txtID = New System.Windows.Forms.TextBox()
-        Me.cmbPatient = New System.Windows.Forms.ComboBox()
-        Me.txtAmount = New System.Windows.Forms.TextBox()
-        Me.cmbPaymentStatus = New System.Windows.Forms.ComboBox()
-        Me.dtpBilling = New System.Windows.Forms.DateTimePicker()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.btnEdit = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnClear = New System.Windows.Forms.Button()
-        Me.dgvBilling = New System.Windows.Forms.DataGridView()
-        Me.btnBack = New System.Windows.Forms.Button()
-        CType(Me.dgvBilling, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTitle.Location = New System.Drawing.Point(300, 15)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(220, 30)
-        Me.lblTitle.TabIndex = 0
-        Me.lblTitle.Text = "Billing Management"
-
-        Me.lblID.AutoSize = True
-        Me.lblID.Location = New System.Drawing.Point(30, 70)
-        Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(44, 15)
-        Me.lblID.TabIndex = 1
-        Me.lblID.Text = "Bill ID:"
-
-        Me.lblPatient.AutoSize = True
-        Me.lblPatient.Location = New System.Drawing.Point(30, 110)
-        Me.lblPatient.Name = "lblPatient"
-        Me.lblPatient.Size = New System.Drawing.Size(47, 15)
-        Me.lblPatient.TabIndex = 2
-        Me.lblPatient.Text = "Patient:"
-
-        Me.lblAmount.AutoSize = True
-        Me.lblAmount.Location = New System.Drawing.Point(30, 150)
-        Me.lblAmount.Name = "lblAmount"
-        Me.lblAmount.Size = New System.Drawing.Size(54, 15)
-        Me.lblAmount.TabIndex = 3
-        Me.lblAmount.Text = "Amount:"
-
-        Me.lblPaymentStatus.AutoSize = True
-        Me.lblPaymentStatus.Location = New System.Drawing.Point(30, 190)
-        Me.lblPaymentStatus.Name = "lblPaymentStatus"
-        Me.lblPaymentStatus.Size = New System.Drawing.Size(92, 15)
-        Me.lblPaymentStatus.TabIndex = 4
-        Me.lblPaymentStatus.Text = "Payment Status:"
-
-        Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(30, 230)
-        Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(34, 15)
-        Me.lblDate.TabIndex = 5
-        Me.lblDate.Text = "Date:"
-
-        Me.txtID.Location = New System.Drawing.Point(150, 67)
-        Me.txtID.Name = "txtID"
-        Me.txtID.ReadOnly = True
-        Me.txtID.Size = New System.Drawing.Size(200, 23)
-        Me.txtID.TabIndex = 6
-
-        Me.cmbPatient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbPatient.FormattingEnabled = True
-        Me.cmbPatient.Location = New System.Drawing.Point(150, 107)
-        Me.cmbPatient.Name = "cmbPatient"
-        Me.cmbPatient.Size = New System.Drawing.Size(200, 23)
-        Me.cmbPatient.TabIndex = 7
-
-        Me.txtAmount.Location = New System.Drawing.Point(150, 147)
-        Me.txtAmount.Name = "txtAmount"
-        Me.txtAmount.Size = New System.Drawing.Size(200, 23)
-        Me.txtAmount.TabIndex = 8
-
-        Me.cmbPaymentStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbPaymentStatus.FormattingEnabled = True
-        Me.cmbPaymentStatus.Items.AddRange(New Object() {"Paid", "Pending", "Cancelled"})
-        Me.cmbPaymentStatus.Location = New System.Drawing.Point(150, 187)
-        Me.cmbPaymentStatus.Name = "cmbPaymentStatus"
-        Me.cmbPaymentStatus.Size = New System.Drawing.Size(200, 23)
-        Me.cmbPaymentStatus.TabIndex = 9
-
-        Me.dtpBilling.Format = System.Windows.Forms.DateTimePickerFormat.Short
-        Me.dtpBilling.Location = New System.Drawing.Point(150, 227)
-        Me.dtpBilling.Name = "dtpBilling"
-        Me.dtpBilling.Size = New System.Drawing.Size(200, 23)
-        Me.dtpBilling.TabIndex = 10
-
-        Me.btnAdd.BackColor = System.Drawing.Color.LightGreen
-        Me.btnAdd.Location = New System.Drawing.Point(30, 280)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 30)
-        Me.btnAdd.TabIndex = 11
-        Me.btnAdd.Text = "Add"
-        Me.btnAdd.UseVisualStyleBackColor = False
-
-        Me.btnEdit.BackColor = System.Drawing.Color.LightBlue
-        Me.btnEdit.Location = New System.Drawing.Point(120, 280)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(75, 30)
-        Me.btnEdit.TabIndex = 12
-        Me.btnEdit.Text = "Edit"
-        Me.btnEdit.UseVisualStyleBackColor = False
-
-        Me.btnDelete.BackColor = System.Drawing.Color.LightCoral
-        Me.btnDelete.Location = New System.Drawing.Point(210, 280)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(75, 30)
-        Me.btnDelete.TabIndex = 13
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.UseVisualStyleBackColor = False
-
-        Me.btnClear.BackColor = System.Drawing.Color.LightGray
-        Me.btnClear.Location = New System.Drawing.Point(300, 280)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(75, 30)
-        Me.btnClear.TabIndex = 14
-        Me.btnClear.Text = "Clear"
-        Me.btnClear.UseVisualStyleBackColor = False
-
-        Me.dgvBilling.AllowUserToAddRows = False
-        Me.dgvBilling.AllowUserToDeleteRows = False
-        Me.dgvBilling.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBilling.Location = New System.Drawing.Point(400, 70)
-        Me.dgvBilling.Name = "dgvBilling"
-        Me.dgvBilling.ReadOnly = True
-        Me.dgvBilling.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvBilling.Size = New System.Drawing.Size(450, 280)
-        Me.dgvBilling.TabIndex = 15
-
-        Me.btnBack.Location = New System.Drawing.Point(30, 330)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(100, 30)
-        Me.btnBack.TabIndex = 16
-        Me.btnBack.Text = "Back"
-        Me.btnBack.UseVisualStyleBackColor = True
-
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(880, 380)
-        Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.dgvBilling)
-        Me.Controls.Add(Me.btnClear)
-        Me.Controls.Add(Me.btnDelete)
-        Me.Controls.Add(Me.btnEdit)
-        Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.dtpBilling)
-        Me.Controls.Add(Me.cmbPaymentStatus)
-        Me.Controls.Add(Me.txtAmount)
-        Me.Controls.Add(Me.cmbPatient)
-        Me.Controls.Add(Me.txtID)
-        Me.Controls.Add(Me.lblDate)
-        Me.Controls.Add(Me.lblPaymentStatus)
-        Me.Controls.Add(Me.lblAmount)
-        Me.Controls.Add(Me.lblPatient)
-        Me.Controls.Add(Me.lblID)
-        Me.Controls.Add(Me.lblTitle)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.MaximizeBox = False
-        Me.Name = "BillingForm"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Billing Management"
-        CType(Me.dgvBilling, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        lblTitle = New Label()
+        lblID = New Label()
+        lblPatient = New Label()
+        lblAmount = New Label()
+        lblPaymentStatus = New Label()
+        lblDate = New Label()
+        txtID = New TextBox()
+        cmbPatient = New ComboBox()
+        txtAmount = New TextBox()
+        cmbPaymentStatus = New ComboBox()
+        dtpBilling = New DateTimePicker()
+        btnAdd = New Button()
+        btnEdit = New Button()
+        btnDelete = New Button()
+        btnClear = New Button()
+        dgvBilling = New DataGridView()
+        btnBack = New Button()
+        CType(dgvBilling, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.AutoSize = True
+        lblTitle.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
+        lblTitle.Location = New Point(300, 15)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(222, 30)
+        lblTitle.TabIndex = 0
+        lblTitle.Text = "Billing Management"
+        ' 
+        ' lblID
+        ' 
+        lblID.AutoSize = True
+        lblID.Location = New Point(30, 70)
+        lblID.Name = "lblID"
+        lblID.Size = New Size(40, 15)
+        lblID.TabIndex = 1
+        lblID.Text = "Bill ID:"
+        ' 
+        ' lblPatient
+        ' 
+        lblPatient.AutoSize = True
+        lblPatient.Location = New Point(30, 110)
+        lblPatient.Name = "lblPatient"
+        lblPatient.Size = New Size(47, 15)
+        lblPatient.TabIndex = 2
+        lblPatient.Text = "Patient:"
+        ' 
+        ' lblAmount
+        ' 
+        lblAmount.AutoSize = True
+        lblAmount.Location = New Point(30, 150)
+        lblAmount.Name = "lblAmount"
+        lblAmount.Size = New Size(54, 15)
+        lblAmount.TabIndex = 3
+        lblAmount.Text = "Amount:"
+        ' 
+        ' lblPaymentStatus
+        ' 
+        lblPaymentStatus.AutoSize = True
+        lblPaymentStatus.Location = New Point(30, 190)
+        lblPaymentStatus.Name = "lblPaymentStatus"
+        lblPaymentStatus.Size = New Size(92, 15)
+        lblPaymentStatus.TabIndex = 4
+        lblPaymentStatus.Text = "Payment Status:"
+        ' 
+        ' lblDate
+        ' 
+        lblDate.AutoSize = True
+        lblDate.Location = New Point(30, 230)
+        lblDate.Name = "lblDate"
+        lblDate.Size = New Size(34, 15)
+        lblDate.TabIndex = 5
+        lblDate.Text = "Date:"
+        ' 
+        ' txtID
+        ' 
+        txtID.Location = New Point(150, 67)
+        txtID.Name = "txtID"
+        txtID.ReadOnly = True
+        txtID.Size = New Size(200, 23)
+        txtID.TabIndex = 6
+        ' 
+        ' cmbPatient
+        ' 
+        cmbPatient.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbPatient.FormattingEnabled = True
+        cmbPatient.Location = New Point(150, 107)
+        cmbPatient.Name = "cmbPatient"
+        cmbPatient.Size = New Size(200, 23)
+        cmbPatient.TabIndex = 7
+        ' 
+        ' txtAmount
+        ' 
+        txtAmount.Location = New Point(150, 147)
+        txtAmount.Name = "txtAmount"
+        txtAmount.Size = New Size(200, 23)
+        txtAmount.TabIndex = 8
+        ' 
+        ' cmbPaymentStatus
+        ' 
+        cmbPaymentStatus.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbPaymentStatus.FormattingEnabled = True
+        cmbPaymentStatus.Items.AddRange(New Object() {"Paid", "Pending", "Cancelled"})
+        cmbPaymentStatus.Location = New Point(150, 187)
+        cmbPaymentStatus.Name = "cmbPaymentStatus"
+        cmbPaymentStatus.Size = New Size(200, 23)
+        cmbPaymentStatus.TabIndex = 9
+        ' 
+        ' dtpBilling
+        ' 
+        dtpBilling.Format = DateTimePickerFormat.Short
+        dtpBilling.Location = New Point(150, 227)
+        dtpBilling.Name = "dtpBilling"
+        dtpBilling.Size = New Size(200, 23)
+        dtpBilling.TabIndex = 10
+        ' 
+        ' btnAdd
+        ' 
+        btnAdd.BackColor = Color.LightGreen
+        btnAdd.Location = New Point(30, 280)
+        btnAdd.Name = "btnAdd"
+        btnAdd.Size = New Size(75, 30)
+        btnAdd.TabIndex = 11
+        btnAdd.Text = "Add"
+        btnAdd.UseVisualStyleBackColor = False
+        ' 
+        ' btnEdit
+        ' 
+        btnEdit.BackColor = Color.LightBlue
+        btnEdit.Location = New Point(120, 280)
+        btnEdit.Name = "btnEdit"
+        btnEdit.Size = New Size(75, 30)
+        btnEdit.TabIndex = 12
+        btnEdit.Text = "Edit"
+        btnEdit.UseVisualStyleBackColor = False
+        ' 
+        ' btnDelete
+        ' 
+        btnDelete.BackColor = Color.LightCoral
+        btnDelete.Location = New Point(210, 280)
+        btnDelete.Name = "btnDelete"
+        btnDelete.Size = New Size(75, 30)
+        btnDelete.TabIndex = 13
+        btnDelete.Text = "Delete"
+        btnDelete.UseVisualStyleBackColor = False
+        ' 
+        ' btnClear
+        ' 
+        btnClear.BackColor = Color.LightGray
+        btnClear.Location = New Point(300, 280)
+        btnClear.Name = "btnClear"
+        btnClear.Size = New Size(75, 30)
+        btnClear.TabIndex = 14
+        btnClear.Text = "Clear"
+        btnClear.UseVisualStyleBackColor = False
+        ' 
+        ' dgvBilling
+        ' 
+        dgvBilling.AllowUserToAddRows = False
+        dgvBilling.AllowUserToDeleteRows = False
+        dgvBilling.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvBilling.Location = New Point(400, 70)
+        dgvBilling.Name = "dgvBilling"
+        dgvBilling.ReadOnly = True
+        dgvBilling.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvBilling.Size = New Size(450, 280)
+        dgvBilling.TabIndex = 15
+        ' 
+        ' btnBack
+        ' 
+        btnBack.Location = New Point(30, 330)
+        btnBack.Name = "btnBack"
+        btnBack.Size = New Size(100, 30)
+        btnBack.TabIndex = 16
+        btnBack.Text = "Back"
+        btnBack.UseVisualStyleBackColor = True
+        ' 
+        ' BillingForm
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(1147, 545)
+        Controls.Add(btnBack)
+        Controls.Add(dgvBilling)
+        Controls.Add(btnClear)
+        Controls.Add(btnDelete)
+        Controls.Add(btnEdit)
+        Controls.Add(btnAdd)
+        Controls.Add(dtpBilling)
+        Controls.Add(cmbPaymentStatus)
+        Controls.Add(txtAmount)
+        Controls.Add(cmbPatient)
+        Controls.Add(txtID)
+        Controls.Add(lblDate)
+        Controls.Add(lblPaymentStatus)
+        Controls.Add(lblAmount)
+        Controls.Add(lblPatient)
+        Controls.Add(lblID)
+        Controls.Add(lblTitle)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        MaximizeBox = False
+        Name = "BillingForm"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Billing Management"
+        CType(dgvBilling, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents lblTitle As Label
